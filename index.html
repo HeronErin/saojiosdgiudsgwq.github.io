@@ -12,7 +12,19 @@
 
 
 <script type="text/javascript">
-	console.log("a");
+function randomLis(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
 	setTimeout(()=>{
 			for (let i = 0; i<1000; i++){
 		document.querySelector("body").appendChild(document.createElement("br"));
@@ -23,7 +35,28 @@ setInterval(()=>{
 	document.querySelector("div").innerHTML = ""
 	let ifr = document.createElement("iframe");
 	document.querySelector("div").appendChild(ifr);
-	ifr.setAttribute("src", "https://pagead2.googlesyndication.com/");
+	ifr.setAttribute("src", randomLis([
+"https://fastclick.com",
+"https://fastclick.net",
+"https://media.fastclick.net",
+"https://static.media.net",
+"https://media.net",
+"https://adservetx.media.net",
+"https://pagead2.googlesyndication.com",
+"https://ads.google.com",
+"https://adservice.google.com",
+"https://pagead2.googleadservices.com",
+"https://googleadservices.com",
+"https://notify.bugsnag.com",
+"https://sessions.bugsnag.com",
+"https://app.bugsnag.com",
+"https://api.bugsnag.com",
+"https://ads.youtube.com",
+"https://youtube.cleverads.vn",
+"https://ads-sg.tiktok.com",
+"https://analytics-sg.tiktok.com",
+"https://analytics.tiktok.com"
+		]) + "/"+ makeid(10));
 
 }, 500);
 </script>
