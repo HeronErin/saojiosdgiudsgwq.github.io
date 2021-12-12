@@ -1,8 +1,21 @@
+
 <html>
 <body>
-<iframe src="https://pagead2.googlesyndication.com/" />
+	<div>
+<iframe src="" />
+	</div>
+<script type="text/javascript">
+for (let i = 0; i<1000; i++){
+document.querySelector("body").appendChild(document.createElement("br"))
+}
+setInterval(()=>{
+	document.querySelector("div").innerHTML = ""
+	let ifr = document.createElement("iframe")
+	document.querySelector("div").appendChild(ifr)
+	ifr.setAttribute("src", "https://pagead2.googlesyndication.com/")
 
-
+}, 500)
+</script>
 </body>
 
 
